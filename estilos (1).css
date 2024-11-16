@@ -1,0 +1,243 @@
+@media (max-width: 768px) {
+    .audio-player {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        /* Centrar horizontalmente */
+        align-items: center;
+        /* Centrar verticalmente */
+
+
+
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        text-align: center;
+        /* Centrar la tabla en móviles */
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        text-align: center;
+        /* Centrar el contenido dentro de cada td */
+
+    }
+}
+
+h1 {
+    font-size: 6vw;
+    /* Tamaño relativo a la ventana */
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 48px;
+        /* Tamaño fijo en pantallas grandes */
+    }
+}
+
+
+
+@keyframes drawText {
+    0% {
+        color: transparent;
+        stroke-dashoffset: 10000;
+        stroke: transparent;
+    }
+
+    75% {
+        stroke: white;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+h1 {
+    font-family: 'DocallismeOnStreet', sans-serif;
+    /* Usa el mismo nombre que definiste en @font-face */
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    stroke: transparent;
+    stroke-width: 1px;
+    stroke-dasharray: 10000;
+    animation: drawText 60s 1s ease-in both;
+    color: transparent;
+    background: linear-gradient(90deg, #ffffffc5, #9e1af6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 0 auto;
+}
+
+
+
+
+@font-face {
+    font-family: 'DocallismeOnStreet';
+    src: url('docallismeonstreet.woff') format('woff'),
+        url('DOCALLISME ON STREET.ttf') format('truetype'),
+        url('docallismeonstreet.otf') format('opentype');
+}
+
+body {
+    background-color: #212121
+}
+
+.table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.lol {
+
+
+    text-decoration: none;
+}
+
+.button {
+
+    display: flex;
+    background-color: #00DA5A;
+    color: #ffffff;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: .6s ease;
+    text-decoration: none;
+}
+
+.button svg {
+    height: 30px;
+    text-decoration: none;
+}
+
+.button:hover {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+
+
+.audio-player {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 80px;
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-left: 20px
+}
+
+.album-cover {
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.player-controls {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-info {
+    margin-bottom: 4px;
+}
+
+.song-title {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.artist {
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0;
+    color: #f3ffef;
+    font-family: monospace;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #4f4f4f;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 50%;
+    height: 100%;
+    background-color: #1db954;
+    transform-origin: left;
+    animation: progress-animation 10s linear infinite;
+}
+
+.buttons {
+    display: flex;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.play-btn,
+.pause-btn {
+    font-size: 16px;
+    color: #fff;
+    margin-right: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.play-btn:hover,
+.pause-btn:hover {
+    transform: scale(1.2);
+}
+
+@keyframes progress-animation {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
